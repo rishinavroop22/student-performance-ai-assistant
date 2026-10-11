@@ -1,24 +1,17 @@
 from setuptools import find_packages, setup
-from typing import List
 
-HYPEN_E_DOT = "-e ."
 
-def get_requirements(file_path: str) -> List[str]:
-    with open(file_path) as file_obj:
-        requirements = file_obj.read().splitlines()
-
-    if HYPEN_E_DOT in requirements:
-        requirements.remove(HYPEN_E_DOT)
-
-    return requirements
+def get_requirements(path):
+    with open(path) as f:
+        return [line.strip() for line in f if line.strip() and not line.startswith(("#", "-"))]
 
 
 setup(
-    name="mlproject",
-    version="0.0.1",
+    name="student-performance-assistant",
+    version="1.0.0",
     author="rishi",
     author_email="rishinavroop22@gmail.com",
-    packages=find_packages(where="src"),
-    package_dir={"": "src"},
+    packages=find_packages(include=["src", "src.*"]),
     install_requires=get_requirements("requirements.txt"),
+    python_requires=">=3.10",
 )

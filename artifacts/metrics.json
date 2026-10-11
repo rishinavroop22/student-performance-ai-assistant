@@ -1,0 +1,114 @@
+{
+  "best_model": "Ridge Regression",
+  "selection": "5-fold cross-validated R2 on the training set",
+  "test_metrics": {
+    "r2": 0.8803,
+    "mae": 4.215,
+    "rmse": 5.397
+  },
+  "n_train": 800,
+  "n_test": 200,
+  "leaderboard": [
+    {
+      "model": "Ridge Regression",
+      "cv_r2_mean": 0.8691,
+      "cv_r2_std": 0.0137,
+      "best_params": {
+        "alpha": 10.0
+      },
+      "tuning_seconds": 0.09
+    },
+    {
+      "model": "Linear Regression",
+      "cv_r2_mean": 0.869,
+      "cv_r2_std": 0.0139,
+      "best_params": {},
+      "tuning_seconds": 1.59
+    },
+    {
+      "model": "Support Vector Machine (SVR)",
+      "cv_r2_mean": 0.8683,
+      "cv_r2_std": 0.0139,
+      "best_params": {
+        "C": 50,
+        "epsilon": 1.0,
+        "kernel": "linear"
+      },
+      "tuning_seconds": 3.0
+    },
+    {
+      "model": "CatBoost",
+      "cv_r2_mean": 0.8603,
+      "cv_r2_std": 0.0135,
+      "best_params": {
+        "depth": 4,
+        "iterations": 200,
+        "learning_rate": 0.05
+      },
+      "tuning_seconds": 2.42
+    },
+    {
+      "model": "Gradient Boosting",
+      "cv_r2_mean": 0.8555,
+      "cv_r2_std": 0.0126,
+      "best_params": {
+        "learning_rate": 0.1,
+        "n_estimators": 100,
+        "subsample": 0.8
+      },
+      "tuning_seconds": 5.24
+    },
+    {
+      "model": "XGBoost",
+      "cv_r2_mean": 0.8546,
+      "cv_r2_std": 0.0147,
+      "best_params": {
+        "learning_rate": 0.1,
+        "max_depth": 3,
+        "n_estimators": 100
+      },
+      "tuning_seconds": 1.32
+    },
+    {
+      "model": "Random Forest",
+      "cv_r2_mean": 0.8398,
+      "cv_r2_std": 0.0202,
+      "best_params": {
+        "max_depth": 10,
+        "min_samples_leaf": 3,
+        "n_estimators": 300
+      },
+      "tuning_seconds": 13.06
+    },
+    {
+      "model": "AdaBoost",
+      "cv_r2_mean": 0.8176,
+      "cv_r2_std": 0.018,
+      "best_params": {
+        "learning_rate": 0.5,
+        "n_estimators": 100
+      },
+      "tuning_seconds": 2.76
+    },
+    {
+      "model": "Decision Tree",
+      "cv_r2_mean": 0.7999,
+      "cv_r2_std": 0.0192,
+      "best_params": {
+        "max_depth": 8,
+        "min_samples_leaf": 10
+      },
+      "tuning_seconds": 0.18
+    },
+    {
+      "model": "K-Nearest Neighbors",
+      "cv_r2_mean": 0.6662,
+      "cv_r2_std": 0.0198,
+      "best_params": {
+        "n_neighbors": 15,
+        "weights": "distance"
+      },
+      "tuning_seconds": 0.08
+    }
+  ]
+}

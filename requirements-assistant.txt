@@ -1,0 +1,4 @@
+# PyTorch backend for the Hugging Face assistant model (CPU build is enough).
+# Without it the API still works and the assistant falls back to template text.
+-r requirements.txt
+torch>=2.2
